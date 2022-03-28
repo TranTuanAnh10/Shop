@@ -144,7 +144,7 @@ html {
     display: block;
 }
 .select-input__list{
-    position: absolute;
+    position: absolute; 
     left: 0;
     right: 0;
     top: 20px;
@@ -153,10 +153,9 @@ html {
     border-radius: 2px;
     background-color: var(--white-color);
     display: none;
+    z-index: 1;
 }
-.select-input__item{
 
-}
 .select-input__link{
     font-size: 1.4rem;
     color: var(--text-color);
@@ -166,4 +165,32 @@ html {
 }
 .select-input__link:hover{
     color: var(--primary-color);
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.pagination-item{
+    margin: 0 10px;
+}
+.pagination-item-link{
+    --height: 30px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #939393;
+    display: block;
+    min-width: 40px;
+    min-height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+.pagination-item--active{
+    background-color: var(--primary-color);
+    color: #eeeeee;
+}
+.pagination-item--active .pagination-item-link:hover{
+    filter: brightness(50%)
 }
